@@ -1,0 +1,14 @@
+ARG ALPINE_TAG=latest
+FROM alpine:${ALPINE_TAG}
+
+LABEL maintainer="Matthias Konrath" \
+    description="Mikrotik ligolo-ng Container"
+
+### Download ligolo-ng
+RUN cd /root && wget "https://github.com/nicocha30/ligolo-ng/releases/download/vVERSION/ligolo-ng_agent_VERSION_linux_ARCH.tar.gz"
+
+### Extract ligolo-ng
+RUN cd /root && tar -xpvf ligolo-ng_agent_*.tar.gz
+
+
+ENTRYPOINT ["/root/agent"]
