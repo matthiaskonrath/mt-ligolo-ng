@@ -28,8 +28,8 @@ sed -i -e "s/ARCH/$ligolo_ng_arch/g" Dockerfile
 ########################################################################
 ### BUILD + EXPORT ###
 ########################################################################
-docker buildx build  --no-cache --platform linux/$docker_build_arch --output=type=docker -t mt-ligolo-ng_$ligolo_ng_arch .
-docker save mt-ligolo-ng_$ligolo_ng_arch > mt-ligolo-ng_$ligolo_ng_arch.tar
+docker buildx build  --no-cache --platform linux/$docker_build_arch --output=type=docker -t mt-ligolo-ng_v$ligolo_ng_version-$ligolo_ng_arch .
+docker save mt-ligolo-ng_v$ligolo_ng_version-$ligolo_ng_arch > mt-ligolo-ng_v$ligolo_ng_version-$ligolo_ng_arch.tar
 
 
 
