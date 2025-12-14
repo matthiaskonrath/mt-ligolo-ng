@@ -34,7 +34,7 @@ nano build.sh
 ### ligolo-ng configuration and start (see logs for results)
 To ignore the certificate just add `-ignore-cert`
 ```
-/container/set cmd="-connect TARGET_IP:PORT" mt-ligolo-ng_arm64 start-on-boot=yes
+/container/set cmd="-connect TARGET_IP:PORT" mt-ligolo-ng_arm64 start-on-boot=yes auto-restart-interval=300
 /container/start mt-ligolo-ng_arm64
 ```
 
